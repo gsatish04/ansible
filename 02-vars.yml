@@ -11,11 +11,12 @@
         msg: Url in Task2 = {{URL}}
 
 
--name: Demo on File variables
- hosts: all
- vars_files:
-   - sample-vars.yml
- tasks:
-   - name: Access URL
-     ansible.builtin.debug:
-      msg: URL = {{URL}}
+- name: Demo on File variables
+  hosts: all
+  vars_files:
+    - sample-vars.yml
+  tasks:
+    - name: Access URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+
