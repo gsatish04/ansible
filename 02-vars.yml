@@ -14,7 +14,7 @@
 - name: Demo on File variables
   hosts: all
   vars_files:
-    - sample-vars.yml
+    - 03-sample-vars.yml
   tasks:
     - name: Access URL
       ansible.builtin.debug:
