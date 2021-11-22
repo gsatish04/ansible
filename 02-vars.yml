@@ -9,6 +9,7 @@
     - name: Access URL in Task2
       ansible.builtin.debug:
         msg: Url in Task2 = {{URL}}
+## Declare variable in play level then all the tasks can access that variable.
 
 
 - name: Demo on File variables
@@ -38,10 +39,16 @@
         msg: URL = {{URL}}
       vars:
         URL: task.google.com
-    - name: Access URL from Previous Task
+#    - name: Access URL from Previous Task
+#     ansible.builtin.debug:
+#       msg: URL = {{URL}}
+## you can declare variable on tasks, However the scope is only that task.
+
+- name: Demo on Inventory variables
+  hosts: all
+  tasks:
+    - name: Access URL Inventory
       ansible.builtin.debug:
         msg: URL = {{URL}}
-
-
 
 
