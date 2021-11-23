@@ -63,6 +63,8 @@
   hosts: all
   vars:
     URL1: play.example.com
+  vars_file:
+    - sample-vars.yml
   tasks:
     - name: Print URL1
       ansible.builtin.debug:
