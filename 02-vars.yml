@@ -81,7 +81,6 @@
     - name: Print a fact
       ansible.builtin.debug:
         msg: "HOST OS = {{ansible.distribution}}"
-      vars:
-        URL1: task.example.com
+
 
 
