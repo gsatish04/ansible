@@ -91,6 +91,7 @@
     - name: Get uptime command output
       ansible.builtin.shell: uptime
       register: OUT
+
     - name: Print OUT
       ansible.builtin.debug:
       msg: "{{OUT}}"
