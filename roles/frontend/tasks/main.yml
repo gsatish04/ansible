@@ -10,9 +10,9 @@
     enabled: yes
 
 - name: Download code
-    include_role:
-      name: common
-      tasks_front: download
+  include_role:
+    name: common
+    tasks_front: download
 
 
 
