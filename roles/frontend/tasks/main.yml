@@ -1,4 +1,12 @@
-- name: Print Frontend
-  debug:
-    msg: Frontend
+- name: Install Nginx
+  yum:
+    name: nginx
+    state: latest
+
+- name: Start Nginx service
+  ansible.builtin.systemd:
+    state: restarted
+    name: httpd
+    enabled: yes
+
 
